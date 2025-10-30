@@ -12,7 +12,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">
-          Interactive 3D Globe
+          Travel By Randika
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 h-[calc(100vh-180px)]">
           <div>
