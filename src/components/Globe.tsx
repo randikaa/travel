@@ -13,11 +13,11 @@ interface GlobeProps {
 
 function CountryMarker({ country, onClick }: { country: Country; onClick: () => void }) {
   const [hovered, setHovered] = useState(false);
-  
+
   const phi = (90 - country.lat) * (Math.PI / 180);
   const theta = (country.lng + 180) * (Math.PI / 180);
   const radius = 2.02;
-  
+
   const x = -(radius * Math.sin(phi) * Math.cos(theta));
   const y = radius * Math.cos(phi);
   const z = radius * Math.sin(phi) * Math.sin(theta);
@@ -71,7 +71,7 @@ function EarthGlobe({ countries, onCountryClick }: GlobeProps) {
 
 export default function Globe({ countries, onCountryClick }: GlobeProps) {
   return (
-    <Canvas 
+    <Canvas
       camera={{ position: [0, 0, 5], fov: 45 }}
       gl={{ alpha: true }}
       style={{ background: 'transparent' }}
